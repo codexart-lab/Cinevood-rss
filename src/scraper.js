@@ -118,3 +118,12 @@ module.exports = {
   scrapeCategoryContent
 };
         
+// Modify scrapeLatestContent and scrapeCategoryContent in src/scraper.js
+
+const axiosOptions = {
+  headers: {
+    'User-Agent': '1Cinevood RSS Generator Bot (https://your-vercel-app.vercel.app/)'
+  }
+};
+
+const response = await axios.get(BASE_URL, axiosOptions);
